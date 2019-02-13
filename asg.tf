@@ -2,7 +2,7 @@ resource "aws_autoscaling_group" "lab-asg" {
     desired_capacity          = "${var.minsize}"
     health_check_grace_period = 60
     health_check_type         = "EC2"
-    launch_configuration      = "lab-asg"
+    launch_configuration      = "${var.launch_configuration}"
     max_size                  = "${var.maxsize}"
     min_size                  = "${var.minsize}"
     name                      = "${var.name}"
