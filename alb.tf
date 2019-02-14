@@ -1,5 +1,5 @@
 resource "aws_lb" "laboratorio" {
-    depends_on = ["aws_autoscaling_group.lab-asg"]
+#    depends_on = ["aws_autoscaling_group.lab-asg"]
     name = "${var.name}"
     subnets         = ["subnet-05f89930ac797da20", "subnet-05fcebf163b6d4e2c", "subnet-004b83919459ea399", "subnet-038f1350b72737f14", "subnet-0bddfed2369135611", "subnet-0425d67c715b005fb"]
     security_groups = ["${var.security_groups}"]
